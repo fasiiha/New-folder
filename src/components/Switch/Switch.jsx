@@ -1,6 +1,5 @@
 import React from "react";
 
-import SwitchProvider from "@dhiwise/react-switch";
 import PropTypes from "prop-types";
 
 const variants = {

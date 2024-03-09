@@ -11,6 +11,8 @@ import Layout from "./components/Sidebar/Sidebar";
 import LoanPage from "pages/Loan/Loan";
 import ServicesPage from "pages/Services/Services";
 import SettingEditProfilePage from "pages/SettingEditProfile/SettingEditProfile";
+import SettingPagePreferencesPage from "pages/SettingPagePreferences/SettingPagePreferences";
+import SettingPageSecurityPage from "pages/SettingPageSecurity/SettingPageSecurity";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
@@ -39,15 +41,21 @@ const ProjectRoutes = () => {
       path: "loans",
       element: <LoanPage />,
     },
-
     {
       path: "services",
       element: <ServicesPage />,
     },
-
     {
       path: "settings",
       element: <SettingEditProfilePage />,
+    },
+    {
+      path: "setting-preference",
+      element: <SettingPagePreferencesPage />,
+    },
+    {
+      path: "setting-page-security",
+      element: <SettingPageSecurityPage />,
     },
   ]);
 

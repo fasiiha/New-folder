@@ -2,7 +2,8 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { Button, Input, Text, SelectBox, Img } from "../../components";
 import Header from "../../components/Header/Header";
-import Sidebar1 from "../../components/Sidebar1";
+import Sidebar from "components/Sidebar/Sidebar";
+import { Link } from "react-router-dom";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -21,7 +22,7 @@ export default function SettingEditProfilePage() {
         />
       </Helmet>
       <div className="flex flex-row justify-center items-start w-full bg-gray-100">
-        <Sidebar1 className="w-[252px] h-screen top-0 bg-white-A700 !sticky overflow-auto" />
+        <Sidebar />
         <div className="flex flex-col items-center justify-start w-[83%] gap-[31px]">
           <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
           <div className="flex flex-row justify-center w-[94%]">
@@ -34,18 +35,12 @@ export default function SettingEditProfilePage() {
                     </Text>
                     <div className="h-[3px] w-full rounded-tl-[10px] rounded-tr-[10px] bg-indigo-600_01" />
                   </div>
-                  <Text
-                    as="p"
-                    className="ml-[57px] !text-blue_gray-400 !font-medium"
-                  >
+                  <Link to="/setting-preference" className="text-right ml-2">
                     Preferences
-                  </Text>
-                  <Text
-                    as="p"
-                    className="ml-[76px] !text-blue_gray-400 !font-medium"
-                  >
+                  </Link>
+                  <Link to="/setting-page-security" className="text-right ml-2">
                     Security
-                  </Text>
+                  </Link>
                 </div>
                 <div className="h-px w-full mt-[-1px] bg-gray-300" />
               </div>

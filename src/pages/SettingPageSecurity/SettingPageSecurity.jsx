@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { Button, Input, Text, Switch } from "../../components";
+import { Button, Input, Text } from "../../components";
 import Header from "../../components/Header/Header";
-import Sidebar1 from "../../components/Sidebar1";
+import Sidebar from "components/Sidebar/Sidebar";
 
 export default function SettingPageSecurityPage() {
   return (
@@ -16,7 +16,7 @@ export default function SettingPageSecurityPage() {
       </Helmet>
       <div className="flex flex-row justify-center w-full bg-gray-100">
         <div className="flex flex-row justify-center items-start w-full">
-          <Sidebar1 className="w-[252px] h-screen top-0 !sticky overflow-auto" />
+          <Sidebar />
           <div className="flex flex-col items-center justify-start w-[83%] gap-[31px]">
             <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
             <div className="flex flex-row justify-center w-[94%]">

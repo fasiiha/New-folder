@@ -1,6 +1,7 @@
 import React from "react";
 import { CloseSVG } from "../../assets/images";
 import { Img, Button, Input, Heading } from "..";
+import { Link } from "react-router-dom";
 
 export default function Header({ ...props }) {
   const [searchBarValue, setSearchBarValue] = React.useState("");
@@ -9,7 +10,7 @@ export default function Header({ ...props }) {
     <header {...props}>
       <div className="flex flex-row justify-between items-center w-full mx-auto max-w-[1110px]">
         <Heading size="3xl" as="h3" className="!text-gray-900">
-          Transactions
+          Online Banking System
         </Heading>
         <div className="flex flex-row justify-between items-center w-auto">
           <Input
@@ -35,12 +36,13 @@ export default function Header({ ...props }) {
             }
             className="w-[50%] gap-[15px] text-blue_gray-400 rounded-[25px]"
           />
-          <Button className="w-[50px]">
+
+          <Link to="/settings" className="text-right ml-2">
             <Img src="images/img_settings_1.svg" />
-          </Button>
-          <Button className="w-[50px]">
+          </Link>
+          <Link to="/" className="text-right ml-2">
             <Img src="images/img_002_notification_1.svg" />
-          </Button>
+          </Link>
           <Img
             src="images/img_ellipse_1.png"
             alt="circleimage"

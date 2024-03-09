@@ -6,4 +6,15 @@ import { Button } from "./Button/Button";
 import { Slider } from "./Slider/Slider";
 import { ReactTable } from "./ReactTable/ReactTable";
 import { SelectBox } from "./SelectBox/SelectBox";
-export { Text, Heading, Input, Img, Button, Slider, ReactTable, SelectBox };
+import { Switch } from "./Switch/Switch";
+export {
+  Text,
+  Heading,
+  Input,
+  Img,
+  Button,
+  Slider,
+  Switch,
+  ReactTable,
+  SelectBox,
+};
