@@ -7,7 +7,7 @@ import Transaction from "pages/Transaction/Transaction";
 import Accounts from "pages/Accounts/Accounts";
 import Investments from "pages/Investments/Investments";
 import CreditCards from "pages/CreditCards/CreditCards";
-import Layout from "./layout";
+import Layout from "./components/Sidebar/Sidebar";
 import LoanPage from "pages/Loan/Loan";
 import ServicesPage from "pages/Services/Services";
 import SettingEditProfilePage from "pages/SettingEditProfile/SettingEditProfile";

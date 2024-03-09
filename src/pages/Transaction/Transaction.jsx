@@ -1,10 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Img, Text, Button, Heading } from "../../components";
-import Header from "../../components/Header";
-import { ReactTable } from "../../components/ReactTable";
+import Header from "../../components/Header/Header";
+import { ReactTable } from "../../components/ReactTable/ReactTable";
 import Sidebar1 from "../../components/Sidebar1";
 import { createColumnHelper } from "@tanstack/react-table";
+import Sidebar from "components/Sidebar/Sidebar";
 
 const tableData = [
   {
@@ -61,7 +62,12 @@ export default function TransactionPage() {
       tableColumnHelper.accessor("description", {
         cell: (info) => (
           <div className="flex flex-row justify-center items-start gap-3.5">
-            <Button color="red_700" size="sm" variant="outline" className="w-[30px] mb-[17px] ml-7">
+            <Button
+              color="red_700"
+              size="sm"
+              variant="outline"
+              className="w-[30px] mb-[17px] ml-7"
+            >
               <Img src="images/img_arrow_red_700.svg" />
             </Button>
             <Text as="p" className="mt-1.5 mr-[30px] !text-blue_gray-900">
@@ -144,7 +150,11 @@ export default function TransactionPage() {
       tableColumnHelper.accessor("receipt", {
         cell: (info) => (
           <div className="h-[51px] relative">
-            <Text size="lg" as="p" className="w-max left-[12%] bottom-0 top-0 m-auto !text-indigo-600_01 absolute">
+            <Text
+              size="lg"
+              as="p"
+              className="w-max left-[12%] bottom-0 top-0 m-auto !text-indigo-600_01 absolute"
+            >
               {info?.getValue?.()}
             </Text>
             <div className="h-[35px] w-[77%] left-0 bottom-0 top-0 m-auto border-indigo-600_01 border border-solid absolute rounded-[17px]" />
@@ -164,10 +174,13 @@ export default function TransactionPage() {
     <>
       <Helmet>
         <title>Bank_App</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-row justify-center items-start w-full bg-gray-100">
-        <Sidebar1 className="w-[252px] h-screen top-0 bg-white-A700 !sticky overflow-auto" />
+        <Sidebar />
         <div className="flex flex-col items-center justify-start w-[83%] gap-[27px]">
           <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
           <div className="flex flex-col items-center justify-start w-[94%] gap-6">
@@ -176,7 +189,11 @@ export default function TransactionPage() {
                 <div className="flex flex-col items-center justify-start w-full gap-[17px]">
                   <div className="flex flex-row justify-between items-start w-full">
                     <Heading as="h1">My Cards</Heading>
-                    <Button size="xs" shape="square" className="text-blue_gray-900 font-semibold min-w-[93px]">
+                    <Button
+                      size="xs"
+                      shape="square"
+                      className="text-blue_gray-900 font-semibold min-w-[93px]"
+                    >
                       + Add Card
                     </Button>
                   </div>
@@ -188,15 +205,27 @@ export default function TransactionPage() {
                             <Text size="xs" as="p" className="!text-white-A700">
                               Balance
                             </Text>
-                            <Text size="3xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="3xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               $5,756
                             </Text>
                           </div>
-                          <Img src="images/img_chip_card.png" alt="balance_two" className="w-[34px] object-cover" />
+                          <Img
+                            src="images/img_chip_card.png"
+                            alt="balance_two"
+                            className="w-[34px] object-cover"
+                          />
                         </div>
                         <div className="flex flex-row justify-between w-[76%]">
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               CARD HOLDER
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -204,7 +233,11 @@ export default function TransactionPage() {
                             </Text>
                           </div>
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               VALID THRU
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -216,10 +249,18 @@ export default function TransactionPage() {
                       <div className="flex flex-row justify-center w-full">
                         <div className="flex flex-row justify-center w-full p-5 rounded-bl-[25px] rounded-br-[25px] bg-gradient">
                           <div className="flex flex-row justify-between items-center w-[98%] mx-1">
-                            <Text size="4xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="4xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               3778 **** **** 1234
                             </Text>
-                            <Img src="images/img_group_17.svg" alt="image" className="h-[30px]" />
+                            <Img
+                              src="images/img_group_17.svg"
+                              alt="image"
+                              className="h-[30px]"
+                            />
                           </div>
                         </div>
                       </div>
@@ -231,15 +272,27 @@ export default function TransactionPage() {
                             <Text size="xs" as="p" className="!text-white-A700">
                               Balance
                             </Text>
-                            <Text size="3xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="3xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               $5,756
                             </Text>
                           </div>
-                          <Img src="images/img_chip_card.png" alt="chipcard_one" className="w-[34px] object-cover" />
+                          <Img
+                            src="images/img_chip_card.png"
+                            alt="chipcard_one"
+                            className="w-[34px] object-cover"
+                          />
                         </div>
                         <div className="flex flex-row justify-between w-[76%]">
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               CARD HOLDER
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -247,7 +300,11 @@ export default function TransactionPage() {
                             </Text>
                           </div>
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               VALID THRU
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -259,10 +316,18 @@ export default function TransactionPage() {
                       <div className="flex flex-row justify-center w-full">
                         <div className="flex flex-row justify-center w-full p-5 rounded-bl-[25px] rounded-br-[25px] bg-gradient">
                           <div className="flex flex-row justify-between items-center w-[98%] mx-1">
-                            <Text size="4xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="4xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               3778 **** **** 1234
                             </Text>
-                            <Img src="images/img_group_17.svg" alt="image" className="h-[30px]" />
+                            <Img
+                              src="images/img_group_17.svg"
+                              alt="image"
+                              className="h-[30px]"
+                            />
                           </div>
                         </div>
                       </div>
@@ -300,7 +365,11 @@ export default function TransactionPage() {
                         </Text>
                       </div>
                       <div className="flex flex-col items-center justify-start w-[18%] mt-0.5 ml-1.5 gap-2">
-                        <Text size="md" as="p" className="!text-blue_gray-800 text-center !font-medium">
+                        <Text
+                          size="md"
+                          as="p"
+                          className="!text-blue_gray-800 text-center !font-medium"
+                        >
                           $12,500
                         </Text>
                         <div className="h-[137px] w-[68%] bg-indigo-600_01 rounded-[10px]" />
@@ -351,28 +420,60 @@ export default function TransactionPage() {
               </div>
               <div className="flex flex-row justify-end items-center w-[30%]">
                 <div className="flex flex-row justify-start items-center w-[28%] gap-1">
-                  <Img src="images/img_arrow.svg" alt="arrow_eleven" className="h-[24px] w-[24px]" />
-                  <Text size="lg" as="p" className="!text-indigo-600_01 !font-medium">
+                  <Img
+                    src="images/img_arrow.svg"
+                    alt="arrow_eleven"
+                    className="h-[24px] w-[24px]"
+                  />
+                  <Text
+                    size="lg"
+                    as="p"
+                    className="!text-indigo-600_01 !font-medium"
+                  >
                     Previous
                   </Text>
                 </div>
-                <Button color="indigo_600_01" size="md" className="ml-3 font-medium min-w-[40px] rounded-[10px]">
+                <Button
+                  color="indigo_600_01"
+                  size="md"
+                  className="ml-3 font-medium min-w-[40px] rounded-[10px]"
+                >
                   1
                 </Button>
-                <Text size="lg" as="p" className="ml-[11px] !text-indigo-600_01 !font-medium">
+                <Text
+                  size="lg"
+                  as="p"
+                  className="ml-[11px] !text-indigo-600_01 !font-medium"
+                >
                   2
                 </Text>
-                <Text size="lg" as="p" className="ml-[27px] !text-indigo-600_01 !font-medium">
+                <Text
+                  size="lg"
+                  as="p"
+                  className="ml-[27px] !text-indigo-600_01 !font-medium"
+                >
                   3
                 </Text>
-                <Text size="lg" as="p" className="ml-[27px] !text-indigo-600_01 !font-medium">
+                <Text
+                  size="lg"
+                  as="p"
+                  className="ml-[27px] !text-indigo-600_01 !font-medium"
+                >
                   4
                 </Text>
                 <div className="flex flex-row justify-start items-center w-[19%] ml-7 gap-1">
-                  <Text size="lg" as="p" className="!text-indigo-600_01 !font-medium">
+                  <Text
+                    size="lg"
+                    as="p"
+                    className="!text-indigo-600_01 !font-medium"
+                  >
                     Next
                   </Text>
-                  <Img src="images/img_arrow_indigo_600_01.svg" alt="arrow_thirteen" className="h-[24px] w-[24px]" />
+                  <Img
+                    src="images/img_arrow_indigo_600_01.svg"
+                    alt="arrow_thirteen"
+                    className="h-[24px] w-[24px]"
+                  />
                 </div>
               </div>
             </div>

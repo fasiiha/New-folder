@@ -1,18 +1,22 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Text, Button, Img, Heading } from "../../components";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import Sidebar1 from "../../components/Sidebar1";
+import Sidebar from "components/Sidebar/Sidebar";
 
 export default function ServicesPage() {
   return (
     <>
       <Helmet>
         <title>bank_app</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-row justify-center items-start w-full bg-gray-100">
-        <Sidebar1 className="w-[252px] h-screen top-0 bg-white-A700 !sticky overflow-auto" />
+        <Sidebar />
         <div className="flex flex-col items-center justify-start w-[83%] gap-[31px]">
           <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
           <div className="flex flex-col items-center justify-start w-[94%] gap-6">

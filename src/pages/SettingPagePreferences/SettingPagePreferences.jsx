@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Button, Text, Switch, Input } from "../../components";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import Sidebar1 from "../../components/Sidebar1";
 
 export default function SettingPagePreferencesPage() {
@@ -9,7 +9,10 @@ export default function SettingPagePreferencesPage() {
     <>
       <Helmet>
         <title>bank_app</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-row justify-center w-full bg-gray-100">
         <div className="flex flex-row justify-center items-start w-full">
@@ -41,7 +44,11 @@ export default function SettingPagePreferencesPage() {
                       <Text as="p" className="!text-blue_gray-400">
                         Currency
                       </Text>
-                      <Input name="usd" placeholder="USD" className="w-full border-gray-300 border border-solid" />
+                      <Input
+                        name="usd"
+                        placeholder="USD"
+                        className="w-full border-gray-300 border border-solid"
+                      />
                     </div>
                     <div className="flex flex-col items-start justify-start w-[49%] gap-2.5">
                       <Text as="p" className="!text-blue_gray-400">

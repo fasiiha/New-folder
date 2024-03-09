@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Button, Input, Text, Switch } from "../../components";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import Sidebar1 from "../../components/Sidebar1";
 
 export default function SettingPageSecurityPage() {
@@ -9,7 +9,10 @@ export default function SettingPageSecurityPage() {
     <>
       <Helmet>
         <title>bank_app</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-row justify-center w-full bg-gray-100">
         <div className="flex flex-row justify-center items-start w-full">
@@ -73,7 +76,11 @@ export default function SettingPageSecurityPage() {
                     />
                   </div>
                 </div>
-                <Button color="indigo_600_01" size="lg" className="ml-[860px] font-medium min-w-[190px] rounded-[15px]">
+                <Button
+                  color="indigo_600_01"
+                  size="lg"
+                  className="ml-[860px] font-medium min-w-[190px] rounded-[15px]"
+                >
                   Save
                 </Button>
               </div>

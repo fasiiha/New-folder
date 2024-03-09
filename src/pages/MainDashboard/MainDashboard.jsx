@@ -1,10 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Text, Img, Heading, Button, Slider } from "../../components";
-import Header from "../../components/Header";
-import { MenuItem, Menu, Sidebar } from "react-pro-sidebar";
+import Header from "../../components/Header/Header";
 import { Link } from "react-router-dom";
-import Layout from "../../layout";
+import Sidebar from "components/Sidebar/Sidebar";
 
 export default function MainDashboardPage() {
   const [sliderState, setSliderState] = React.useState(0);
@@ -20,7 +19,7 @@ export default function MainDashboardPage() {
         />
       </Helmet>
       <div className="flex flex-row justify-center items-start w-full pb-[30px] bg-gray-100">
-        <Layout />
+        <Sidebar />
         <div className="flex flex-col items-center justify-start w-[83%] gap-[25px]">
           <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
           <div className="flex flex-col items-center justify-start w-[94%] gap-[25px]">

@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Button, Input, Text, SelectBox, Img } from "../../components";
-import Header from "../../components/Header";
+import Header from "../../components/Header/Header";
 import Sidebar1 from "../../components/Sidebar1";
 
 const dropDownOptions = [
@@ -15,7 +15,10 @@ export default function SettingEditProfilePage() {
     <>
       <Helmet>
         <title>bank_app</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-row justify-center items-start w-full bg-gray-100">
         <Sidebar1 className="w-[252px] h-screen top-0 bg-white-A700 !sticky overflow-auto" />
@@ -31,10 +34,16 @@ export default function SettingEditProfilePage() {
                     </Text>
                     <div className="h-[3px] w-full rounded-tl-[10px] rounded-tr-[10px] bg-indigo-600_01" />
                   </div>
-                  <Text as="p" className="ml-[57px] !text-blue_gray-400 !font-medium">
+                  <Text
+                    as="p"
+                    className="ml-[57px] !text-blue_gray-400 !font-medium"
+                  >
                     Preferences
                   </Text>
-                  <Text as="p" className="ml-[76px] !text-blue_gray-400 !font-medium">
+                  <Text
+                    as="p"
+                    className="ml-[76px] !text-blue_gray-400 !font-medium"
+                  >
                     Security
                   </Text>
                 </div>
@@ -48,7 +57,11 @@ export default function SettingEditProfilePage() {
                       alt="circleimage_one"
                       className="h-[130px] w-[130px] rounded-[50%]"
                     />
-                    <Button color="indigo_600_01" size="sm" className="w-[30px] ml-[-28px]">
+                    <Button
+                      color="indigo_600_01"
+                      size="sm"
+                      className="w-[30px] ml-[-28px]"
+                    >
                       <Img src="images/img_group_194.svg" />
                     </Button>
                   </div>
@@ -105,7 +118,12 @@ export default function SettingEditProfilePage() {
                         Date of Birth
                       </Text>
                       <SelectBox
-                        indicator={<Img src="images/img_arrowdown_blue_gray_400.svg" alt="arrow_down" />}
+                        indicator={
+                          <Img
+                            src="images/img_arrowdown_blue_gray_400.svg"
+                            alt="arrow_down"
+                          />
+                        }
                         name="dateOfBirth"
                         placeholder="25 January 1990"
                         options={dropDownOptions}
@@ -160,7 +178,11 @@ export default function SettingEditProfilePage() {
                       <Text as="p" className="!text-blue_gray-400">
                         Country
                       </Text>
-                      <Input name="country" placeholder="USA" className="w-full border-gray-300 border border-solid" />
+                      <Input
+                        name="country"
+                        placeholder="USA"
+                        className="w-full border-gray-300 border border-solid"
+                      />
                     </div>
                   </div>
                   <Button

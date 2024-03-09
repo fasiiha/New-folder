@@ -1,18 +1,21 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Heading, Text, Button, Img } from "../../components";
-import Header from "../../components/Header";
-import Sidebar1 from "../../components/Sidebar1";
+import Header from "../../components/Header/Header";
+import Sidebar from "components/Sidebar/Sidebar";
 
 export default function AccountsPage() {
   return (
     <>
       <Helmet>
         <title>Bank_App</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-row justify-center items-start w-full bg-gray-100">
-        <Sidebar1 className="w-[252px] h-screen top-0 bg-white-A700 !sticky overflow-auto" />
+        <Sidebar />
         <div className="flex flex-col items-center justify-start w-[83%] gap-[31px]">
           <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
           <div className="flex flex-col items-center justify-start w-[94%] gap-[23px]">
@@ -73,7 +76,10 @@ export default function AccountsPage() {
                           <Img src="images/img_renew_1.svg" />
                         </Button>
                         <div className="flex flex-col items-start justify-start w-[28%] ml-[25px] gap-1">
-                          <Text as="p" className="!text-blue_gray-900 !font-medium">
+                          <Text
+                            as="p"
+                            className="!text-blue_gray-900 !font-medium"
+                          >
                             Spotify Subscription
                           </Text>
                           <Text size="lg" as="p">
@@ -90,7 +96,10 @@ export default function AccountsPage() {
                           Pending
                         </Text>
                       </div>
-                      <Text as="p" className="!text-red-700 text-right !font-medium">
+                      <Text
+                        as="p"
+                        className="!text-red-700 text-right !font-medium"
+                      >
                         -$150
                       </Text>
                     </div>
@@ -100,7 +109,10 @@ export default function AccountsPage() {
                           <Img src="images/img_group_327.svg" />
                         </Button>
                         <div className="flex flex-col items-start justify-start w-[59%] mt-1 gap-1.5">
-                          <Text as="p" className="!text-blue_gray-900 !font-medium">
+                          <Text
+                            as="p"
+                            className="!text-blue_gray-900 !font-medium"
+                          >
                             Mobile Service
                           </Text>
                           <Text size="lg" as="p">
@@ -112,7 +124,10 @@ export default function AccountsPage() {
                       <div className="flex flex-row justify-between w-auto">
                         <Text as="p">1234 ****</Text>
                         <Text as="p">Completed</Text>
-                        <Text as="p" className="!text-red-700 text-right !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-red-700 text-right !font-medium"
+                        >
                           -$340
                         </Text>
                       </div>
@@ -123,7 +138,10 @@ export default function AccountsPage() {
                           <Img src="images/img_group_326.svg" />
                         </Button>
                         <div className="flex flex-col items-start justify-start w-[56%] gap-1">
-                          <Text as="p" className="!text-blue_gray-900 !font-medium">
+                          <Text
+                            as="p"
+                            className="!text-blue_gray-900 !font-medium"
+                          >
                             Emilly Wilson
                           </Text>
                           <Text size="lg" as="p">
@@ -135,7 +153,10 @@ export default function AccountsPage() {
                         <Text as="p">Transfer</Text>
                         <Text as="p">1234 ****</Text>
                         <Text as="p">Completed</Text>
-                        <Text as="p" className="!text-green-600 text-right !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-green-600 text-right !font-medium"
+                        >
                           +$780
                         </Text>
                       </div>
@@ -161,15 +182,27 @@ export default function AccountsPage() {
                             <Text size="xs" as="p" className="!text-white-A700">
                               Balance
                             </Text>
-                            <Text size="3xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="3xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               $5,756
                             </Text>
                           </div>
-                          <Img src="images/img_chip_card.png" alt="chipcard_one" className="w-[34px] object-cover" />
+                          <Img
+                            src="images/img_chip_card.png"
+                            alt="chipcard_one"
+                            className="w-[34px] object-cover"
+                          />
                         </div>
                         <div className="flex flex-row justify-between w-[77%]">
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               CARD HOLDER
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -177,7 +210,11 @@ export default function AccountsPage() {
                             </Text>
                           </div>
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               VALID THRU
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -189,10 +226,18 @@ export default function AccountsPage() {
                       <div className="flex flex-row justify-center w-full">
                         <div className="flex flex-row justify-center w-full p-5 rounded-bl-[25px] rounded-br-[25px] bg-gradient">
                           <div className="flex flex-row justify-between items-center w-[97%] ml-1.5 mr-1">
-                            <Text size="4xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="4xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               3778 **** **** 1234
                             </Text>
-                            <Img src="images/img_group_17.svg" alt="image_one" className="h-[30px]" />
+                            <Img
+                              src="images/img_group_17.svg"
+                              alt="image_one"
+                              className="h-[30px]"
+                            />
                           </div>
                         </div>
                       </div>
@@ -212,7 +257,9 @@ export default function AccountsPage() {
                           <span className="text-blue_gray_800_01">$7,560</span>
                           <span className="text-blue_gray-400">Debited & </span>
                           <span className="text-blue_gray_800_01">$5,420</span>
-                          <span className="text-blue_gray-400">Credited in this Week</span>
+                          <span className="text-blue_gray-400">
+                            Credited in this Week
+                          </span>
                         </Text>
                         <div className="flex flex-row justify-start w-[25%] gap-[25px]">
                           <div className="flex flex-row justify-start items-center w-[41%] gap-2.5">
@@ -262,7 +309,11 @@ export default function AccountsPage() {
                             <Text size="md" as="p" className="text-center">
                               Thu
                             </Text>
-                            <Text size="md" as="p" className="h-[17px] text-center">
+                            <Text
+                              size="md"
+                              as="p"
+                              className="h-[17px] text-center"
+                            >
                               Fri
                             </Text>
                           </div>
@@ -284,7 +335,10 @@ export default function AccountsPage() {
                           </Button>
                         </div>
                         <div className="flex flex-col items-start justify-start w-[53%] gap-[5px]">
-                          <Text as="p" className="!text-blue_gray-900 !font-medium">
+                          <Text
+                            as="p"
+                            className="!text-blue_gray-900 !font-medium"
+                          >
                             Apple Store
                           </Text>
                           <Text size="lg" as="p">
@@ -292,7 +346,11 @@ export default function AccountsPage() {
                           </Text>
                         </div>
                       </div>
-                      <Heading size="s" as="h6" className="!text-indigo-600_01 text-right">
+                      <Heading
+                        size="s"
+                        as="h6"
+                        className="!text-indigo-600_01 text-right"
+                      >
                         $450
                       </Heading>
                     </div>
@@ -302,7 +360,10 @@ export default function AccountsPage() {
                           <Img src="images/img_group_326.svg" />
                         </Button>
                         <div className="flex flex-col items-start justify-start w-[50%] gap-[7px]">
-                          <Text as="p" className="!text-blue_gray-900 !font-medium">
+                          <Text
+                            as="p"
+                            className="!text-blue_gray-900 !font-medium"
+                          >
                             Michael
                           </Text>
                           <Text size="lg" as="p">
@@ -310,7 +371,11 @@ export default function AccountsPage() {
                           </Text>
                         </div>
                       </div>
-                      <Heading size="s" as="h6" className="!text-indigo-600_01 text-right">
+                      <Heading
+                        size="s"
+                        as="h6"
+                        className="!text-indigo-600_01 text-right"
+                      >
                         $160
                       </Heading>
                     </div>
@@ -320,7 +385,10 @@ export default function AccountsPage() {
                           <Img src="images/img_group_935.svg" />
                         </Button>
                         <div className="flex flex-col items-start justify-start w-[52%] gap-1.5">
-                          <Text as="p" className="!text-blue_gray-900 !font-medium">
+                          <Text
+                            as="p"
+                            className="!text-blue_gray-900 !font-medium"
+                          >
                             Playstation
                           </Text>
                           <Text size="lg" as="p">
@@ -328,7 +396,11 @@ export default function AccountsPage() {
                           </Text>
                         </div>
                       </div>
-                      <Heading size="s" as="h6" className="!text-indigo-600_01 text-right">
+                      <Heading
+                        size="s"
+                        as="h6"
+                        className="!text-indigo-600_01 text-right"
+                      >
                         $1085
                       </Heading>
                     </div>
@@ -338,7 +410,10 @@ export default function AccountsPage() {
                           <Img src="images/img_group_326.svg" />
                         </Button>
                         <div className="flex flex-col items-start justify-start w-[52%] gap-[7px]">
-                          <Text as="p" className="!text-blue_gray-900 !font-medium">
+                          <Text
+                            as="p"
+                            className="!text-blue_gray-900 !font-medium"
+                          >
                             William
                           </Text>
                           <Text size="lg" as="p">
@@ -346,7 +421,11 @@ export default function AccountsPage() {
                           </Text>
                         </div>
                       </div>
-                      <Heading size="s" as="h6" className="!text-indigo-600_01 text-right">
+                      <Heading
+                        size="s"
+                        as="h6"
+                        className="!text-indigo-600_01 text-right"
+                      >
                         $90
                       </Heading>
                     </div>

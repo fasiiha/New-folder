@@ -1,10 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Text, Heading, Button, Img } from "../../components";
-import Header from "../../components/Header";
-import { ReactTable } from "../../components/ReactTable";
-import Sidebar1 from "../../components/Sidebar1";
+import Header from "../../components/Header/Header";
+import { ReactTable } from "../../components/ReactTable/ReactTable";
 import { createColumnHelper } from "@tanstack/react-table";
+import Sidebar from "components/Sidebar/Sidebar";
 
 const tableData = [
   {
@@ -97,7 +97,10 @@ export default function LoanPage() {
       tableColumnHelper.accessor("slno", {
         cell: (info) => <Text as="p">{info?.getValue?.()}</Text>,
         header: (info) => (
-          <Text as="p" className="pt-px pb-[11px] !text-blue_gray-400 !font-medium">
+          <Text
+            as="p"
+            className="pt-px pb-[11px] !text-blue_gray-400 !font-medium"
+          >
             SL No
           </Text>
         ),
@@ -106,7 +109,10 @@ export default function LoanPage() {
       tableColumnHelper.accessor("loanmoney", {
         cell: (info) => <Text as="p">{info?.getValue?.()}</Text>,
         header: (info) => (
-          <Text as="p" className="pt-px pb-2.5 !text-blue_gray-400 !font-medium">
+          <Text
+            as="p"
+            className="pt-px pb-2.5 !text-blue_gray-400 !font-medium"
+          >
             Loan Money
           </Text>
         ),
@@ -115,7 +121,10 @@ export default function LoanPage() {
       tableColumnHelper.accessor("lefttorepay", {
         cell: (info) => <Text as="p">{info?.getValue?.()}</Text>,
         header: (info) => (
-          <Text as="p" className="pt-px pb-2.5 !text-blue_gray-400 !font-medium">
+          <Text
+            as="p"
+            className="pt-px pb-2.5 !text-blue_gray-400 !font-medium"
+          >
             Left to repay
           </Text>
         ),
@@ -133,7 +142,10 @@ export default function LoanPage() {
       tableColumnHelper.accessor("interestrate", {
         cell: (info) => <Text as="p">{info?.getValue?.()}</Text>,
         header: (info) => (
-          <Text as="p" className="pt-px pb-[11px] !text-blue_gray-400 !font-medium">
+          <Text
+            as="p"
+            className="pt-px pb-[11px] !text-blue_gray-400 !font-medium"
+          >
             Interest rate
           </Text>
         ),
@@ -142,7 +154,10 @@ export default function LoanPage() {
       tableColumnHelper.accessor("installment", {
         cell: (info) => <Text as="p">{info?.getValue?.()}</Text>,
         header: (info) => (
-          <Text as="p" className="pt-px pb-[11px] !text-blue_gray-400 !font-medium">
+          <Text
+            as="p"
+            className="pt-px pb-[11px] !text-blue_gray-400 !font-medium"
+          >
             Installment
           </Text>
         ),
@@ -151,14 +166,21 @@ export default function LoanPage() {
       tableColumnHelper.accessor("repay", {
         cell: (info) => (
           <div className="h-[20px] relative">
-            <Text size="xs" as="p" className="left-1/4 top-0 m-auto !text-indigo-500 text-center !font-medium absolute">
+            <Text
+              size="xs"
+              as="p"
+              className="left-1/4 top-0 m-auto !text-indigo-500 text-center !font-medium absolute"
+            >
               {info?.getValue?.()}
             </Text>
             <div className="h-[35px] w-[85%] left-[2%] top-0 m-auto border-indigo-500 border border-solid absolute rounded-[17px]" />
           </div>
         ),
         header: (info) => (
-          <Text as="p" className="pt-px pb-2.5 !text-blue_gray-400 !font-medium">
+          <Text
+            as="p"
+            className="pt-px pb-2.5 !text-blue_gray-400 !font-medium"
+          >
             Repay
           </Text>
         ),
@@ -171,10 +193,13 @@ export default function LoanPage() {
     <>
       <Helmet>
         <title>bank_app</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-row justify-center items-start w-full bg-gray-100">
-        <Sidebar1 className="w-[252px] h-screen top-0 bg-white-A700 !sticky overflow-auto" />
+        <Sidebar />
         <div className="flex flex-col items-center justify-start w-[83%] gap-[31px]">
           <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
           <div className="flex flex-col items-center justify-start w-[94%] gap-6">

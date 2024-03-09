@@ -1,8 +1,8 @@
 import React from "react";
-import { Img } from "./components"; // Import your custom components
+import { Img } from ".."; // Import your custom components
 import { Menu } from "react-pro-sidebar";
 import { Link } from "react-router-dom";
-const Layout = () => {
+const Sidebar = () => {
   const [collapsed, setCollapsed] = React.useState(false);
 
   return (
@@ -49,7 +49,7 @@ const Layout = () => {
               className="h-[25px] w-[25px]"
             />
           </span>
-          <Link to="/" className="text-right ml-2">
+          <Link to="/transaction" className="text-right ml-2">
             <h2>Transaction</h2>
           </Link>
         </div>
@@ -141,4 +141,4 @@ const Layout = () => {
     </div>
   );
 };
-export default Layout;
+export default Sidebar;

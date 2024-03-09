@@ -1,8 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Text, Button, Img, Heading, SelectBox, Input } from "../../components";
-import Header from "../../components/Header";
-import Sidebar1 from "../../components/Sidebar1";
+import Header from "../../components/Header/Header";
+import Sidebar from "components/Sidebar/Sidebar";
 
 const dropDownOptions = [
   { label: "Option1", value: "option1" },
@@ -15,10 +15,15 @@ export default function CreditCardsPage() {
     <>
       <Helmet>
         <title>Bank_App</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
+
       <div className="flex flex-row justify-center items-start w-full pb-[30px] bg-gray-100">
-        <Sidebar1 className="w-[252px] h-screen top-0 bg-white-A700 !sticky overflow-auto" />
+        <Sidebar />
+
         <div className="flex flex-col items-center justify-start w-[83%] gap-[27px]">
           <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
           <div className="flex flex-col items-center justify-start w-[94%] gap-6">
@@ -36,7 +41,11 @@ export default function CreditCardsPage() {
                           $5,756
                         </Text>
                       </div>
-                      <Img src="images/img_chip_card.png" alt="balance_two" className="w-[34px] object-cover" />
+                      <Img
+                        src="images/img_chip_card.png"
+                        alt="balance_two"
+                        className="w-[34px] object-cover"
+                      />
                     </div>
                     <div className="flex flex-row justify-between w-[76%]">
                       <div className="flex flex-col items-start justify-start gap-1">
@@ -63,7 +72,11 @@ export default function CreditCardsPage() {
                         <Text size="4xl" as="p" className="!text-white-A700">
                           3778 **** **** 1234
                         </Text>
-                        <Img src="images/img_group_17.svg" alt="image" className="h-[30px]" />
+                        <Img
+                          src="images/img_group_17.svg"
+                          alt="image"
+                          className="h-[30px]"
+                        />
                       </div>
                     </div>
                   </div>
@@ -79,7 +92,11 @@ export default function CreditCardsPage() {
                           $5,756
                         </Text>
                       </div>
-                      <Img src="images/img_chip_card.png" alt="chipcard_one" className="w-[34px] object-cover" />
+                      <Img
+                        src="images/img_chip_card.png"
+                        alt="chipcard_one"
+                        className="w-[34px] object-cover"
+                      />
                     </div>
                     <div className="flex flex-row justify-between w-[76%]">
                       <div className="flex flex-col items-start justify-start gap-1">
@@ -106,7 +123,11 @@ export default function CreditCardsPage() {
                         <Text size="4xl" as="p" className="!text-white-A700">
                           3778 **** **** 1234
                         </Text>
-                        <Img src="images/img_group_17.svg" alt="image" className="h-[30px]" />
+                        <Img
+                          src="images/img_group_17.svg"
+                          alt="image"
+                          className="h-[30px]"
+                        />
                       </div>
                     </div>
                   </div>
@@ -122,7 +143,11 @@ export default function CreditCardsPage() {
                           $5,756
                         </Text>
                       </div>
-                      <Img src="images/img_chip_card.png" alt="chipcard_one" className="w-[34px] object-cover" />
+                      <Img
+                        src="images/img_chip_card.png"
+                        alt="chipcard_one"
+                        className="w-[34px] object-cover"
+                      />
                     </div>
                     <div className="flex flex-row justify-between w-[76%]">
                       <div className="flex flex-col items-start justify-start gap-1">
@@ -149,7 +174,11 @@ export default function CreditCardsPage() {
                         <Text size="4xl" as="p" className="!text-white-A700">
                           3778 **** **** 1234
                         </Text>
-                        <Img src="images/img_group_17.svg" alt="image" className="h-[30px]" />
+                        <Img
+                          src="images/img_group_17.svg"
+                          alt="image"
+                          className="h-[30px]"
+                        />
                       </div>
                     </div>
                   </div>
@@ -161,7 +190,11 @@ export default function CreditCardsPage() {
                 <Heading as="h2">Card Expense Statistics</Heading>
                 <div className="flex flex-row justify-center w-full p-[27px] bg-white-A700 rounded-[25px]">
                   <div className="flex flex-col items-center justify-start w-[85%] mt-0.5 gap-3.5 mx-[22px]">
-                    <Img src="images/img_group_346_chart.png" alt="image_one" className="w-[76%] object-cover" />
+                    <Img
+                      src="images/img_group_346_chart.png"
+                      alt="image_one"
+                      className="w-[76%] object-cover"
+                    />
                     <div className="flex flex-col w-full gap-3">
                       <div className="flex flex-row justify-between w-[99%] mr-[3px]">
                         <div className="flex flex-row justify-start items-center w-[39%] gap-3">
@@ -234,7 +267,11 @@ export default function CreditCardsPage() {
                         William{" "}
                       </Text>
                     </div>
-                    <Text size="lg" as="p" className="ml-[34px] !text-indigo-500 !font-medium">
+                    <Text
+                      size="lg"
+                      as="p"
+                      className="ml-[34px] !text-indigo-500 !font-medium"
+                    >
                       View Details
                     </Text>
                   </div>
@@ -274,7 +311,11 @@ export default function CreditCardsPage() {
                         Michel
                       </Text>
                     </div>
-                    <Text size="lg" as="p" className="ml-[34px] !text-indigo-500 !font-medium">
+                    <Text
+                      size="lg"
+                      as="p"
+                      className="ml-[34px] !text-indigo-500 !font-medium"
+                    >
                       View Details
                     </Text>
                   </div>
@@ -314,7 +355,11 @@ export default function CreditCardsPage() {
                         Edward
                       </Text>
                     </div>
-                    <Text size="lg" as="p" className="ml-[34px] !text-indigo-500 !font-medium">
+                    <Text
+                      size="lg"
+                      as="p"
+                      className="ml-[34px] !text-indigo-500 !font-medium"
+                    >
                       View Details
                     </Text>
                   </div>
@@ -328,9 +373,10 @@ export default function CreditCardsPage() {
                 </Heading>
                 <div className="flex flex-col items-start justify-start w-full gap-[26px] p-[27px] bg-white-A700 rounded-[25px]">
                   <Text as="p" className="w-[94%] ml-[3px] leading-7">
-                    Credit Card generally means a plastic card issued by Scheduled Commercial Banks assigned to a
-                    Cardholder, with a credit limit, that can be used to purchase goods and services on credit or obtain
-                    cash advances.
+                    Credit Card generally means a plastic card issued by
+                    Scheduled Commercial Banks assigned to a Cardholder, with a
+                    credit limit, that can be used to purchase goods and
+                    services on credit or obtain cash advances.
                   </Text>
                   <div className="flex flex-row justify-start items-center w-full ml-[3px] gap-[30px]">
                     <div className="flex flex-col items-start justify-start w-[48%] gap-[9px]">
@@ -363,7 +409,12 @@ export default function CreditCardsPage() {
                     <div className="flex flex-col items-start justify-start w-[48%] gap-[9px]">
                       <Text as="p">Expiration Date</Text>
                       <SelectBox
-                        indicator={<Img src="images/img_arrowdown.svg" alt="arrow_down" />}
+                        indicator={
+                          <Img
+                            src="images/img_arrowdown.svg"
+                            alt="arrow_down"
+                          />
+                        }
                         name="expirationDate"
                         placeholder="25 January 2025"
                         options={dropDownOptions}
@@ -389,7 +440,10 @@ export default function CreditCardsPage() {
                         <Img src="images/img_001_block_credit_card.svg" />
                       </Button>
                       <div className="flex flex-col items-start justify-start w-[69%] gap-[7px]">
-                        <Text as="p" className="!text-blue_gray-900 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-900 !font-medium"
+                        >
                           Block Card
                         </Text>
                         <Text size="lg" as="p">
@@ -402,7 +456,10 @@ export default function CreditCardsPage() {
                         <Img src="images/img_002_padlock.svg" />
                       </Button>
                       <div className="flex flex-col items-start justify-start w-[70%] gap-[5px]">
-                        <Text as="p" className="!text-blue_gray-900 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-900 !font-medium"
+                        >
                           Change Pin Code
                         </Text>
                         <Text size="lg" as="p">
@@ -417,7 +474,10 @@ export default function CreditCardsPage() {
                         </Button>
                       </div>
                       <div className="flex flex-col items-start justify-start w-[71%] gap-[5px]">
-                        <Text as="p" className="!text-blue_gray-900 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-900 !font-medium"
+                        >
                           Add to Google Pay
                         </Text>
                         <Text size="lg" as="p">
@@ -432,7 +492,10 @@ export default function CreditCardsPage() {
                         </Button>
                       </div>
                       <div className="flex flex-col items-start justify-start w-[71%] gap-[5px]">
-                        <Text as="p" className="!text-blue_gray-900 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-900 !font-medium"
+                        >
                           Add to Apple Pay
                         </Text>
                         <Text size="lg" as="p">
@@ -447,7 +510,10 @@ export default function CreditCardsPage() {
                         </Button>
                       </div>
                       <div className="flex flex-col items-start justify-start w-[71%] gap-[5px]">
-                        <Text as="p" className="!text-blue_gray-900 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-900 !font-medium"
+                        >
                           Add to Apple Store
                         </Text>
                         <Text size="lg" as="p">

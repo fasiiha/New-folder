@@ -1,10 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Text, Heading, Button, Img } from "../../components";
-import Header from "../../components/Header";
-import { ReactTable } from "../../components/ReactTable";
-import Sidebar1 from "../../components/Sidebar1";
+import Header from "../../components/Header/Header";
+import { ReactTable } from "../../components/ReactTable/ReactTable";
 import { createColumnHelper } from "@tanstack/react-table";
+import { Sidebar } from "react-pro-sidebar";
 
 const table1Data = [
   { slno: "01.", name: "Trivago", price: "$520", return: "+5%" },
@@ -77,10 +77,13 @@ export default function InvestmentsPage() {
     <>
       <Helmet>
         <title>Bank_App</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-row justify-center items-start w-full bg-gray-100">
-        <Sidebar1 className="w-[252px] h-screen top-0 bg-white-A700 !sticky overflow-auto" />
+        <Sidebar />
         <div className="flex flex-col items-center justify-start w-[83%] gap-[31px]">
           <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
           <div className="flex flex-col items-center justify-start w-[94%] gap-[26px]">
@@ -313,7 +316,10 @@ export default function InvestmentsPage() {
                         <Img src="images/img_group_876.svg" />
                       </Button>
                       <div className="flex flex-col items-start justify-start w-[60%] gap-[5px]">
-                        <Text as="p" className="!text-blue_gray-900 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-900 !font-medium"
+                        >
                           Tesla Motors
                         </Text>
                         <Text size="lg" as="p">
@@ -323,7 +329,10 @@ export default function InvestmentsPage() {
                     </div>
                     <div className="flex flex-row justify-between w-[44%] mr-[21px]">
                       <div className="flex flex-col items-start justify-start gap-[5px]">
-                        <Text as="p" className="!text-blue_gray-900 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-900 !font-medium"
+                        >
                           $8,200
                         </Text>
                         <Text size="lg" as="p">
