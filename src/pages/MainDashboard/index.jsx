@@ -3,77 +3,24 @@ import { Helmet } from "react-helmet";
 import { Text, Img, Heading, Button, Slider } from "../../components";
 import Header from "../../components/Header";
 import { MenuItem, Menu, Sidebar } from "react-pro-sidebar";
+import { Link } from "react-router-dom";
+import Layout from "../../layout";
 
 export default function MainDashboardPage() {
   const [sliderState, setSliderState] = React.useState(0);
   const sliderRef = React.useRef(null);
-  const [collapsed, setCollapsed] = React.useState(false);
 
   return (
     <>
       <Helmet>
         <title>Bank_App</title>
-        <meta name="description" content="Web site created using create-react-app" />
+        <meta
+          name="description"
+          content="Web site created using create-react-app"
+        />
       </Helmet>
       <div className="flex flex-row justify-center items-start w-full pb-[30px] bg-gray-100">
-        <Sidebar
-          width="252px !important"
-          collapsedWidth="80px !important"
-          collapsed={collapsed}
-          onClick={() => {
-            setCollapsed(!collapsed);
-          }}
-          className="h-screen top-0 bg-white-A700 !sticky overflow-auto"
-        >
-          <Img src="images/img_logo.png" alt="logo_one" className="w-[65%] mt-[30px] mx-auto object-cover" />
-          <Menu
-            menuItemStyles={{
-              button: {
-                padding: "17px 17px 17px 39px",
-                gap: "20px",
-                color: "#888ea2",
-                fontWeight: 500,
-                fontSize: "18px",
-                [`&:hover, &.ps-active`]: { color: "#314ca3" },
-              },
-            }}
-            className="flex flex-col items-center justify-start w-full mt-[50px] mb-[364px]"
-          >
-            <MenuItem icon={<Img src="images/img_vector.svg" alt="vector_one" className="h-[25px] w-[25px]" />}>
-              Dashboard
-            </MenuItem>
-            <MenuItem icon={<Img src="images/img_glyph.svg" alt="glyph_one" className="h-[25px] w-[25px]" />}>
-              Transactions
-            </MenuItem>
-            <MenuItem icon={<Img src="images/img_user_3_1.svg" alt="user3one_one" className="h-[25px] w-[25px]" />}>
-              Accounts
-            </MenuItem>
-            <MenuItem icon={<Img src="images/img_group.svg" alt="image" className="h-[25px] w-[25px]" />}>
-              Investments
-            </MenuItem>
-            <MenuItem
-              icon={<Img src="images/img_credit_card_1.svg" alt="creditcardone" className="h-[25px] w-[25px]" />}
-            >
-              Credit Cards
-            </MenuItem>
-            <MenuItem icon={<Img src="images/img_loan_1.svg" alt="loanone_one" className="h-[25px] w-[25px]" />}>
-              Loans
-            </MenuItem>
-            <MenuItem icon={<Img src="images/img_service_1.svg" alt="serviceone_one" className="h-[25px] w-[25px]" />}>
-              Services
-            </MenuItem>
-            <MenuItem
-              icon={<Img src="images/img_econometrics_1.svg" alt="econometricsone" className="h-[25px] w-[25px]" />}
-            >
-              My Privileges
-            </MenuItem>
-            <MenuItem
-              icon={<Img src="images/img_vector_blue_gray_400.svg" alt="vector_three" className="h-[25px] w-[25px]" />}
-            >
-              Setting
-            </MenuItem>
-          </Menu>
-        </Sidebar>
+        <Layout />
         <div className="flex flex-col items-center justify-start w-[83%] gap-[25px]">
           <Header className="flex justify-center items-center w-full pt-5 pb-[19px] px-5 border-gray-300 border-b border-solid bg-white-A700" />
           <div className="flex flex-col items-center justify-start w-[94%] gap-[25px]">
@@ -82,29 +29,43 @@ export default function MainDashboardPage() {
                 <div className="flex flex-col items-center justify-start w-full gap-[17px]">
                   <div className="flex flex-row justify-between items-start w-full">
                     <Heading as="h1">My Cards</Heading>
-                    <a href="#">
-                      <Heading size="md" as="h2" className="text-right">
-                        See All
-                      </Heading>
-                    </a>
+                    <Link to="/transaction" className="text-right">
+                      <h2>See All</h2>
+                    </Link>
                   </div>
                   <div className="flex flex-row w-full gap-[30px]">
                     <div className="flex flex-col items-center justify-start w-[48%] pt-6 gap-[33px] bg-indigo-600_01 rounded-[25px]">
                       <div className="flex flex-col items-start justify-start w-[87%] gap-[27px]">
                         <div className="flex flex-row justify-between items-start w-full">
                           <div className="flex flex-col items-start justify-start gap-0.5">
-                            <Text size="xs" as="p" className="!text-white-A700 !font-lato">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700 !font-lato"
+                            >
                               Balance
                             </Text>
-                            <Text size="3xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="3xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               $5,756
                             </Text>
                           </div>
-                          <Img src="images/img_chip_card.png" alt="balance_two" className="w-[34px] object-cover" />
+                          <Img
+                            src="images/img_chip_card.png"
+                            alt="balance_two"
+                            className="w-[34px] object-cover"
+                          />
                         </div>
                         <div className="flex flex-row justify-between w-[76%]">
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               CARD HOLDER
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -112,7 +73,11 @@ export default function MainDashboardPage() {
                             </Text>
                           </div>
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               VALID THRU
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -124,10 +89,18 @@ export default function MainDashboardPage() {
                       <div className="flex flex-row justify-center w-full">
                         <div className="flex flex-row justify-center w-full p-5 rounded-bl-[25px] rounded-br-[25px] bg-gradient">
                           <div className="flex flex-row justify-between items-center w-[98%] mx-1">
-                            <Text size="4xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="4xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               3778 **** **** 1234
                             </Text>
-                            <Img src="images/img_group_17.svg" alt="image" className="h-[30px]" />
+                            <Img
+                              src="images/img_group_17.svg"
+                              alt="image"
+                              className="h-[30px]"
+                            />
                           </div>
                         </div>
                       </div>
@@ -136,18 +109,34 @@ export default function MainDashboardPage() {
                       <div className="flex flex-col items-start justify-start w-[87%] gap-[27px]">
                         <div className="flex flex-row justify-between items-start w-full">
                           <div className="flex flex-col items-start justify-start gap-0.5">
-                            <Text size="xs" as="p" className="!text-white-A700 !font-lato">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700 !font-lato"
+                            >
                               Balance
                             </Text>
-                            <Text size="3xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="3xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               $5,756
                             </Text>
                           </div>
-                          <Img src="images/img_chip_card.png" alt="chipcard_one" className="w-[34px] object-cover" />
+                          <Img
+                            src="images/img_chip_card.png"
+                            alt="chipcard_one"
+                            className="w-[34px] object-cover"
+                          />
                         </div>
                         <div className="flex flex-row justify-between w-[76%]">
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               CARD HOLDER
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -155,7 +144,11 @@ export default function MainDashboardPage() {
                             </Text>
                           </div>
                           <div className="flex flex-col items-start justify-start gap-1">
-                            <Text size="xs" as="p" className="!text-white-A700_b2">
+                            <Text
+                              size="xs"
+                              as="p"
+                              className="!text-white-A700_b2"
+                            >
                               VALID THRU
                             </Text>
                             <Text size="lg" as="p" className="!text-white-A700">
@@ -167,10 +160,18 @@ export default function MainDashboardPage() {
                       <div className="flex flex-row justify-center w-full">
                         <div className="flex flex-row justify-center w-full p-5 rounded-bl-[25px] rounded-br-[25px] bg-gradient">
                           <div className="flex flex-row justify-between items-center w-[98%] mx-1">
-                            <Text size="4xl" as="p" className="!text-white-A700">
+                            <Text
+                              size="4xl"
+                              as="p"
+                              className="!text-white-A700"
+                            >
                               3778 **** **** 1234
                             </Text>
-                            <Img src="images/img_group_17.svg" alt="image" className="h-[30px]" />
+                            <Img
+                              src="images/img_group_17.svg"
+                              alt="image"
+                              className="h-[30px]"
+                            />
                           </div>
                         </div>
                       </div>
@@ -187,14 +188,20 @@ export default function MainDashboardPage() {
                         <Img src="images/img_iconfinder_busi.svg" />
                       </Button>
                       <div className="flex flex-col items-start justify-start gap-[5px]">
-                        <Text as="p" className="!text-blue_gray-600 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-600 !font-medium"
+                        >
                           Deposit from my Card
                         </Text>
                         <Text size="lg" as="p">
                           28 January 2021
                         </Text>
                       </div>
-                      <Text as="p" className="!text-red-700 text-right !font-medium">
+                      <Text
+                        as="p"
+                        className="!text-red-700 text-right !font-medium"
+                      >
                         -$850
                       </Text>
                     </div>
@@ -203,14 +210,20 @@ export default function MainDashboardPage() {
                         <Img src="images/img_iconfinder_payp.svg" />
                       </Button>
                       <div className="flex flex-col items-center justify-start w-[39%] ml-[17px] gap-[5px]">
-                        <Text as="p" className="!text-blue_gray-600 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-600 !font-medium"
+                        >
                           Deposit Paypal
                         </Text>
                         <Text size="lg" as="p">
                           25 January 2021
                         </Text>
                       </div>
-                      <Text as="p" className="ml-[46px] !text-green-600 text-right !font-medium">
+                      <Text
+                        as="p"
+                        className="ml-[46px] !text-green-600 text-right !font-medium"
+                      >
                         +$2,500
                       </Text>
                     </div>
@@ -219,14 +232,20 @@ export default function MainDashboardPage() {
                         <Img src="images/img_iconfinder_6_4753731.svg" />
                       </Button>
                       <div className="flex flex-col items-start justify-start w-[38%] ml-[17px] gap-[7px]">
-                        <Text as="p" className="!text-blue_gray-600 !font-medium">
+                        <Text
+                          as="p"
+                          className="!text-blue_gray-600 !font-medium"
+                        >
                           Jemi Wilson
                         </Text>
                         <Text size="lg" as="p">
                           21 January 2021
                         </Text>
                       </div>
-                      <Text as="p" className="ml-12 !text-green-600 text-right !font-medium">
+                      <Text
+                        as="p"
+                        className="ml-12 !text-green-600 text-right !font-medium"
+                      >
                         +$5,400
                       </Text>
                     </div>
@@ -276,7 +295,11 @@ export default function MainDashboardPage() {
                               0
                             </Text>
                           </div>
-                          <Img src="images/img_group_899.svg" alt="image_one" className="h-[186px]" />
+                          <Img
+                            src="images/img_group_899.svg"
+                            alt="image_one"
+                            className="h-[186px]"
+                          />
                         </div>
                         <div className="flex flex-row justify-between w-[84%] mr-[37px]">
                           <Text size="s" as="p" className="text-center">
@@ -297,7 +320,11 @@ export default function MainDashboardPage() {
                           <Text size="s" as="p" className="text-center">
                             Thu
                           </Text>
-                          <Text size="s" as="p" className="h-[16px] text-center">
+                          <Text
+                            size="s"
+                            as="p"
+                            className="h-[16px] text-center"
+                          >
                             Fri
                           </Text>
                         </div>
@@ -321,7 +348,9 @@ export default function MainDashboardPage() {
                             35%
                             <br />
                           </span>
-                          <span className="text-white-A700 font-bold">Others</span>
+                          <span className="text-white-A700 font-bold">
+                            Others
+                          </span>
                         </Text>
                       </div>
                     </div>
@@ -341,7 +370,9 @@ export default function MainDashboardPage() {
                             15%
                             <br />
                           </span>
-                          <span className="text-white-A700 font-bold">Bill Expense</span>
+                          <span className="text-white-A700 font-bold">
+                            Bill Expense
+                          </span>
                         </Text>
                       </div>
                     </div>
@@ -361,7 +392,9 @@ export default function MainDashboardPage() {
                             20%
                             <br />
                           </span>
-                          <span className="text-white-A700 font-bold">Investment</span>
+                          <span className="text-white-A700 font-bold">
+                            Investment
+                          </span>
                         </Text>
                       </div>
                     </div>
@@ -381,7 +414,9 @@ export default function MainDashboardPage() {
                             30%
                             <br />
                           </span>
-                          <span className="text-white-A700 font-bold">Entertainment</span>
+                          <span className="text-white-A700 font-bold">
+                            Entertainment
+                          </span>
                         </Text>
                       </div>
                     </div>
@@ -400,7 +435,11 @@ export default function MainDashboardPage() {
                       <Slider
                         autoPlay
                         autoPlayInterval={2000}
-                        responsive={{ 0: { items: 1 }, 550: { items: 2 }, 1050: { items: 3 } }}
+                        responsive={{
+                          0: { items: 1 },
+                          550: { items: 2 },
+                          1050: { items: 3 },
+                        }}
                         disableDotsControls
                         activeIndex={sliderState}
                         onSlideChanged={(e) => {
@@ -437,14 +476,23 @@ export default function MainDashboardPage() {
                     <div className="flex flex-row justify-start w-[68%]">
                       <div className="flex flex-col items-end justify-start w-full">
                         <div className="flex flex-row justify-start w-full p-3.5 bg-gray-100_04 rounded-[25px]">
-                          <Heading size="s" as="h6" className="ml-[15px] !text-indigo-700">
+                          <Heading
+                            size="s"
+                            as="h6"
+                            className="ml-[15px] !text-indigo-700"
+                          >
                             525.50
                           </Heading>
                         </div>
                         <Button
                           color="indigo_700"
                           size="lg"
-                          rightIcon={<Img src="images/img_send_iocn.svg" alt="Send Iocn" />}
+                          rightIcon={
+                            <Img
+                              src="images/img_send_iocn.svg"
+                              alt="Send Iocn"
+                            />
+                          }
                           className="mt-[-50px] gap-3 font-medium min-w-[125px] rounded-[25px]"
                         >
                           Send
@@ -507,17 +555,49 @@ export default function MainDashboardPage() {
                         <div className="flex flex-row justify-start w-[91%]">
                           <div className="flex flex-col items-center justify-start w-full gap-1">
                             <div className="flex flex-row justify-between w-[95%]">
-                              <Img src="images/img_group_blue_gray_400.svg" alt="image_three" className="h-[4px]" />
-                              <Img src="images/img_group_blue_gray_400.svg" alt="image_four" className="h-[4px]" />
-                              <Img src="images/img_group_blue_gray_400.svg" alt="image_five" className="h-[4px]" />
-                              <Img src="images/img_group_blue_gray_400.svg" alt="image_six" className="h-[4px]" />
-                              <Img src="images/img_group_blue_gray_400.svg" alt="image_seven" className="h-[4px]" />
-                              <Img src="images/img_group_blue_gray_400.svg" alt="image_eight" className="h-[4px]" />
-                              <Img src="images/img_group_blue_gray_400.svg" alt="image_nine" className="h-[4px]" />
+                              <Img
+                                src="images/img_group_blue_gray_400.svg"
+                                alt="image_three"
+                                className="h-[4px]"
+                              />
+                              <Img
+                                src="images/img_group_blue_gray_400.svg"
+                                alt="image_four"
+                                className="h-[4px]"
+                              />
+                              <Img
+                                src="images/img_group_blue_gray_400.svg"
+                                alt="image_five"
+                                className="h-[4px]"
+                              />
+                              <Img
+                                src="images/img_group_blue_gray_400.svg"
+                                alt="image_six"
+                                className="h-[4px]"
+                              />
+                              <Img
+                                src="images/img_group_blue_gray_400.svg"
+                                alt="image_seven"
+                                className="h-[4px]"
+                              />
+                              <Img
+                                src="images/img_group_blue_gray_400.svg"
+                                alt="image_eight"
+                                className="h-[4px]"
+                              />
+                              <Img
+                                src="images/img_group_blue_gray_400.svg"
+                                alt="image_nine"
+                                className="h-[4px]"
+                              />
                             </div>
                             <div className="flex flex-row justify-between w-full">
                               <div className="flex flex-row justify-between w-auto gap-[50px]">
-                                <Text size="md" as="p" className="h-[17px] mb-px">
+                                <Text
+                                  size="md"
+                                  as="p"
+                                  className="h-[17px] mb-px"
+                                >
                                   Jul
                                 </Text>
                                 <Text size="md" as="p">

@@ -7,10 +7,13 @@ import Transaction from "pages/Transaction";
 import Accounts from "pages/Accounts";
 import Investments from "pages/Investments";
 import CreditCards from "pages/CreditCards";
+import Layout from "./layout";
+import LoanPage from "pages/Loan";
+import ServicesPage from "pages/Services";
+import SettingEditProfilePage from "pages/SettingEditProfile";
 
 const ProjectRoutes = () => {
   let element = useRoutes([
-    { path: "dhiwise-dashboard", element: <Home /> },
     { path: "*", element: <NotFound /> },
     {
       path: "/",
@@ -31,6 +34,20 @@ const ProjectRoutes = () => {
     {
       path: "creditcards",
       element: <CreditCards />,
+    },
+    {
+      path: "loans",
+      element: <LoanPage />,
+    },
+
+    {
+      path: "services",
+      element: <ServicesPage />,
+    },
+
+    {
+      path: "settings",
+      element: <SettingEditProfilePage />,
     },
   ]);
 
